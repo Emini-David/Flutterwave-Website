@@ -1,0 +1,404 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+/* ===== RESET ===== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #1b1b1b;
+    line-height: 1.6;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* ===== HEADER ===== */
+.header {
+    padding: 26px 10px;
+    display: flex;
+    align-items: center;
+}
+.header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo img { height: 40px; }
+
+/* ===== NAV ===== */
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+.nav-links a {
+    margin: 0 16px;
+    text-decoration: none;
+    color: #222d64;
+    font-weight: 600;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+.nav-links a:hover { color: #f78028; }
+
+.dropdown-wrapper {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-wrapper .nav-item {
+    cursor: pointer;
+    padding: 6px 0;
+    margin: 0 16px;
+}
+
+.mega-menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    width: 600px;
+    background: white;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    border-radius: 12px;
+    display: flex;
+    padding: 24px;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-6px);
+    transition: opacity 180ms ease, transform 180ms ease, visibility 180ms;
+    pointer-events: none;
+}
+.dropdown-wrapper:hover .mega-menu,
+.dropdown-wrapper:focus-within .mega-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+.sidebar {
+    width: 35%;
+    border-right: 1px solid #eee;
+    padding-right: 20px;
+}
+.sidebar a {
+    display: block;
+    padding: 10px 0;
+    color: #444;
+    font-size: 14px;
+    margin: 0;
+    font-weight: 500;
+}
+.sidebar a.active { color: #f78028; font-weight: 700; }
+.content { width: 65%; padding-left: 20px; }
+.menu-item { margin-bottom: 20px; }
+.menu-item strong { display: block; margin-bottom: 4px; color: #1b1b1b; font-size: 14px; }
+.menu-item p { font-size: 13px; color: #777; line-height: 1.5; }
+
+/* ===== AUTH ===== */
+.btn-signin {
+    background: #f2f2f2;
+    border: none;
+    padding: 14px 40px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+.btn-signin:hover { background-color: #222d64; color: #fff; }
+
+/* ===== HERO ===== */
+.hero { margin-top: 40px; margin-bottom: 60px; }
+.hero h1 {
+    font-size: 110px;
+    font-family: "Playfair Display", serif;
+    font-weight: 800;
+    line-height: 1.0;
+    letter-spacing: -3px;
+    max-width: 900px;
+}
+.orange-text { color: #f78028; }
+.hero .subtitle {
+    font-size: 18px;
+    color: #4a4a4a;
+    margin-top: 24px;
+    max-width: 560px;
+    line-height: 1.7;
+}
+
+/* ===== CONTENT SECTION =====
+   Two-column layout at section level:
+   LEFT  → buttons on top + SweetPOD image below (starts lower)
+   RIGHT → E25 Dresses image + text, starts from section top (appears taller)
+   This matches the reference image exactly.
+===== */
+.content-section { padding: 0 0 80px; }
+
+.section-inner {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    align-items: start;
+    width: 100%;             /* full viewport width — no container constraint */
+    gap: 70px;
+    max-width: none;
+}
+
+/* LEFT column — buttons get left padding to match rest of page */
+/* Update this to remove the forced left padding */
+.section-left {
+    padding-left: 0; 
+    padding-right: 0;
+}
+
+/* Update the button group to remove extra padding and margin */
+.button-group {
+    display: flex;
+    gap: 16px;
+    margin: 40px 0; /* Adjusted margin */
+    max-width: 560px; 
+    align-items: center;
+    padding-left: 40px; /* Align with your main container padding */
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+/* Ensure the image fills the space */
+.image-left {
+    position: relative;
+    overflow: hidden;
+    height: 500px;
+    width: 100%; /* Ensure it spans the grid column width */
+}
+.button-group a { text-decoration: none; }
+.button-group .btn-primary { order: 0; }
+.button-group .btn-secondary { order: 1; }
+.btn-primary, .btn-secondary {
+    padding: 16px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+.btn-primary { background-color: #0a0e27; color: #fff; }
+.btn-primary:hover { background-color: #1c2460; }
+.btn-secondary { background-color: #efefef; color: #000; }
+.btn-secondary:hover { background-color: #ddd; }
+
+/* LEFT image — SweetPOD */
+.image-left {
+    position: relative;
+    overflow: hidden;
+    height: 500px;
+}
+.image-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.image-left .img-caption {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(255,255,255,0.88);
+    color: #1b1b1b;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 6px 14px;
+    letter-spacing: 0.2px;
+}
+
+/* RIGHT column — starts from very top of section, no buttons above it */
+.section-right {
+    display: flex;
+    flex-direction: column;
+    /* Total height = button area height + image-left height, so right column is taller */
+    min-height: calc(80px + 40px + 500px);   /* approx: button-group height + gap + image */
+}
+
+/* TOP of right column: E25 Dresses image, fills most of the height */
+.image-right {
+    position: relative;
+    overflow: hidden;
+    flex: 1 1 auto;           /* stretches to fill available space above the text */
+    border-bottom: 1px solid #e0e0e0;
+}
+.image-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.image-right .img-caption {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    background: rgba(255,255,255,0.88);
+    color: #1b1b1b;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 5px 12px;
+    border-radius: 6px;
+}
+
+/* BOTTOM of right column: paragraph text */
+.text-content {
+    padding: 28px 32px;
+    flex: 0 0 auto;
+    background: #fff;
+}
+.text-content p {
+    font-size: 15px;
+    color: #333;
+    line-height: 1.85;
+}
+
+/* ===== BUSINESS SECTOR ===== */
+.business-sector { padding: 80px 0; background: #fafafa; }
+.sector-heading {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 36px;
+    color: #1b1b1b;
+}
+.business-sector { 
+    padding: 80px 0; 
+    background: transparent; /* Removed background color */
+}
+
+.sector-heading {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 36px;
+    color: #1b1b1b;
+}
+.business-list {
+    display: flex;
+    gap: 40px;            /* Adjusted gap to help them fit */
+    align-items: center;
+    flex-wrap: nowrap;    /* Prevents wrapping to ensure one line */
+    justify-content: flex-start; /* Keeps them aligned to the left */
+}
+.business-list img {
+    height: 28px;         /* Slightly smaller to ensure they fit in one row */
+    width: auto;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+    object-fit: contain;  /* Ensures logos maintain aspect ratio */
+}
+.business-list img:hover { opacity: 1; }
+
+/* ===== ENDLESS PAYMENT ===== */
+.endless-payment { padding: 80px 0; }
+.endless-payment h1 {
+    font-size: 72px;
+    font-family: "Playfair Display", serif;
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -2px;
+    max-width: 900px;
+    margin-bottom: 20px;
+}
+.endless-payment h1 span { color: #f78028; }
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: 1fr 300px 1fr;
+    gap: 40px;
+    align-items: center;
+    padding: 60px 40px;
+}
+.center-img img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    display: block;
+    margin: 0 auto;
+}
+.feature-col h3 { font-size: 22px; margin-bottom: 14px; }
+.feature-col > p { font-size: 15px; color: #444; line-height: 1.75; }
+
+.feature-item { margin-bottom: 48px; }
+.feature-item:last-child { margin-bottom: 0; }
+.feature-item h3 { font-size: 20px; margin-bottom: 10px; }
+.feature-item p { font-size: 15px; color: #444; line-height: 1.75; }
+
+.btn-dark {
+    background-color: #0a0e27;
+    color: #fff;
+    padding: 16px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    margin-top: 28px;
+}
+.btn-dark:hover { background-color: #1c2460; }
+
+.link-orange {
+    color: #f78028;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
+    transition: gap 0.2s;
+}
+.link-orange:hover { gap: 13px; }
+.end-pay-section{
+    baackground-color: #f2f2f2;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+    .hero h1 { font-size: 72px; }
+    .endless-payment h1 { font-size: 52px; }
+    .feature-grid { grid-template-columns: 1fr; text-align: center; }
+    .center-img img { margin: 0 auto; }
+    .button-group { max-width: 520px; gap: 14px; }
+    .section-left { padding-left: 40px; }
+}
+
+
+@media (max-width: 768px) {
+    .hero h1 { font-size: 48px; letter-spacing: -1.5px; }
+    .nav-links { display: none; }
+    .section-inner {
+        grid-template-columns: 1fr;
+    }
+    .section-left { padding-left: 20px; padding-right: 20px; }
+    .image-left { height: 320px; }
+    .section-right {
+        border-left: none;
+        border-top: 1px solid #e0e0e0;
+        min-height: auto;
+    }
+    .image-right { height: 280px; flex: 0 0 280px; }
+    .endless-payment h1 { font-size: 38px; }
+
+    /* Buttons on tablet: reduce gaps and allow wrapping */
+    .button-group { gap: 12px; max-width: 100%; }
+    .button-group a { white-space: nowrap; }
+}
+
+
+@media (max-width: 480px) {
+    .container { padding: 0 20px; }
+    .hero h1 { font-size: 36px; }
+    .button-group { flex-direction: column; gap: 12px; width: 100%; max-width: none; }
+    .button-group a { display: block; width: 100%; text-align: center; }
+    .business-list { gap: 20px; }
+    .business-list img { height: 22px; }
+}
