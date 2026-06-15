@@ -882,12 +882,10 @@ i:hover {
   width: 100%;
   max-width: 700px;  
 }
-
 .content-wrapper h2 {
   font-size: 50px;
   margin-bottom: 16px;
 }
-
 .content-wrapper  p {
   font-size: 20px;
   color: #d1d1d1;
@@ -1094,7 +1092,7 @@ i:hover {
     color: #666;
 }
 
-/* RESPONSIVE */
+/* Responsive for footer */
 @media (max-width: 1024px) {
   .footer-container {
     grid-template-columns: repeat(3, 1fr);
@@ -1119,7 +1117,7 @@ i:hover {
 }
 
 
-/* RESPONSIVE */
+/* Responsive Section header */
 @media(max-width:768px){
 
     .section-header h2{
@@ -1138,17 +1136,20 @@ i:hover {
 
 
 
-/* ===== RESPONSIVE ===== */
+/* Responsive for hero-section */
 @media (max-width: 1024px) {
-    .hero h1 { font-size: 72px; }
-    .endless-payment h1 { font-size: 52px; }
+    .hero h1 { 
+        font-size: 
+        72px; 
+    }
+    .endless-payment h1 { 
+        font-size: 52px; 
+    }
     .feature-grid { grid-template-columns: 1fr; text-align: center; }
     .center-img img { margin: 0 auto; }
     .button-group { max-width: 520px; gap: 14px; }
     .section-left { padding-left: 40px; }
 }
-
-
 @media (max-width: 768px) {
     .hero h1 { font-size: 48px; letter-spacing: -1.5px; }
     .nav-links { display: none; }
@@ -1165,11 +1166,9 @@ i:hover {
     .image-right { height: 280px; flex: 0 0 280px; }
     .endless-payment h1 { font-size: 38px; }
 
-    /* Buttons on tablet: reduce gaps and allow wrapping */
     .button-group { gap: 12px; max-width: 100%; }
     .button-group a { white-space: nowrap; }
 }
-
 
 @media (max-width: 480px) {
     .container { padding: 0 20px; }
@@ -1178,17 +1177,7 @@ i:hover {
     .button-group a { display: block; width: 100%; text-align: center; }
     .business-list { gap: 20px; }
     .business-list img { height: 22px; }
-}
 
-.shops {
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.shop {
-    flex: 1 1 min(280px, 100%);
-    min-width: 260px;
-    max-width: 320px;
 }
 
 @media (max-width: 960px) {
@@ -1197,9 +1186,8 @@ i:hover {
     }
 }
 
-/* Stlying for Checkout Hero */
+/* Stlying for Checkout Hero begins here */
 .checkout-hero {
-  /* background: #f8f9fa; */
   padding: 80px 60px;
   text-align: center;
 }
@@ -1229,8 +1217,8 @@ i:hover {
     max-width: 900px;
     margin: 0 auto;
     display: flex;
-    /* flex-direction: column; */
-    /* justify-content: space-between; */
+     flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
     
 }
@@ -1242,6 +1230,9 @@ i:hover {
     border-radius: 8px;
     width: 300px;
     transition: 0.5s ease-in-out;
+    flex: 1 1 min(280px, 100%);
+    min-width: 260px;
+    max-width: 320px;
 }
 .shop:hover{
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -1269,6 +1260,8 @@ i:hover {
     text-decoration: none;
     font-size: 14px;
 }
+/* Styling for checkout ends here */
+
 /* Styling for Payout begins here*/
 .hero-main { 
     margin-top: 40px; 
@@ -1280,16 +1273,17 @@ i:hover {
     font-weight: 800;
     line-height: 1.0;
     letter-spacing: -3px;
-    max-width: 900px;
+    max-width: 700px;
 }
 .navy-text { 
     color: #6672C7; 
 }
 .hero-main p{
     font-size: 18px;
-    color: #4a4a4a;
+    color: #000;
     margin-top: 24px;
     max-width: 450px;
+    margin-left: 45px;
     line-height: 1.7;
 }
 .features-list-container {
@@ -1630,39 +1624,41 @@ ul {
     max-width: 700px;
     margin: 0 auto;
     margin-bottom: 60px;
-    /* border-bottom: 1px solid #ccc; */
 }
-.faq-item { border-bottom: 1px solid #ccc; }
-
-  .faq-item input { display: none; }
-
-  .faq-question {
-    display:flex; justify-content:space-between; align-items:center;
-    padding: 25px 0; cursor:pointer; font-size:1.3rem; font-weight:500;
-    color:#1a1a1a; transition: color .2s;
-  }
-
-  .faq-icon {
+.faq-item { 
+    border-bottom: 1px solid #000; 
+}
+.faq-item input { 
+    display: none; 
+}
+.faq-question {
+    display:flex; 
+    justify-content:space-between; 
+    align-items:center;
+    padding: 25px 0; 
+    cursor:pointer; 
+    font-size:1.3rem; 
+    font-weight:500;
+    color:#000; 
+    transition: color .2s;
+}
+.faq-icon {
     display:flex;
     align-items:center;
     gap: 8px;
-  }
-
-  .faq-question i {
+}
+.faq-question i {
     transition: opacity .3s ease, transform .3s ease;
     font-size: 1rem;
-  }
-
-  .faq-icon-down {
+}
+.faq-icon-down {
     opacity: 1;
-  }
-
-  .faq-icon-up {
+}
+.faq-icon-up {
     opacity: 0;
     display: none;
-  }
-
-  .faq-answer {
+}
+.faq-answer {
     max-height:0;
     overflow:hidden;
     transition: max-height .3s ease, padding .3s ease;
@@ -1678,28 +1674,27 @@ ul {
   }
 
   /* When checkbox is checked */
-  .faq-item input:checked ~ .faq-question {
-    color:#0aa3a3;
-  }
+.faq-item:has(input:checked) .faq-question {
+  color: #0aa3a3;
+}
 
-  .faq-item input:checked ~ .faq-question i {
-    transform: none;
-  }
+.faq-item:has(input:checked) .faq-question i {
+  transform: none;
+}
 
-  .faq-item input:checked ~ .faq-question .faq-icon-down {
-    opacity: 0;
-    display: none;
-  }
+.faq-item:has(input:checked) .faq-question .faq-icon-down {
+  opacity: 0;
+  display: none;
+}
 
-  .faq-item input:checked ~ .faq-question .faq-icon-up {
-    opacity: 1;
-    display: inline-block;
-  }
-
-  .faq-item input:checked ~ .faq-answer {
-    max-height: 250px;
-    padding-top: 8px;
-  }
+.faq-item:has(input:checked) .faq-question .faq-icon-up {
+  opacity: 1;
+  display: inline-block;
+}
+.faq-item:has(input:checked) .faq-answer {
+  max-height: 250px;
+  padding-top: 8px;
+}
 
 /* Styling for FAQ ends here*/
 
@@ -1749,7 +1744,6 @@ ul {
     padding: 80px 0;
 }
 .collect-section p{
-    /* margin-bottom: 160px; */
     width: 100%;
     color: #000;
     max-width: 1150px;
@@ -1767,7 +1761,6 @@ ul {
   }
   .left {
     flex: 1;
-    /* max-width: 600px; */
   }
   .step {
     display: flex;
