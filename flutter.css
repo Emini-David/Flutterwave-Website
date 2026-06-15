@@ -2,8 +2,6 @@
 
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
-
-html,
 body {
     overflow-x: hidden;
 }
@@ -34,7 +32,7 @@ body {
     height: 40px; 
 }
 
-/* ===== NAV ===== */
+/* NAV */
 .nav-links {
     display: flex;
     align-items: center;
@@ -92,7 +90,6 @@ body {
     transform: translateY(-6px);
     transition: opacity 180ms ease, transform 180ms ease, visibility 180ms;
     pointer-events: none;
-    /* margin-right: 500px; */
 }
 .mega-menu2 {
     position: absolute;
@@ -244,31 +241,17 @@ body {
 }
 .sidebar a {
     display: block;
-    padding: 10px 0;
-    color: #444;
+    padding: 10px;
+    color: #070f44;
     font-size: 14px;
     margin: 0;
-    font-weight: 500;
+    font-weight: 600;
+    /* width: 80px; */
+    
 }
 .sidebar a:hover { 
-    background-color: #f2f2f2;
+    color: #00abae;
     transition: color 0.3s;
-}
-.sidebar a.active { 
-    color: #222d64;
-    font-weight: 600; 
-    /* display: hidden; */
-    padding: 15px;
-    /* background-color: #eeeeee; */
-    border-radius: 10px;
-}
-.sidebar a.active1 { 
-    color: #222d64;
-    font-weight: 600; 
-    /* display: hidden; */
-    padding: 15px;
-    /* background-color: transparent; */
-    border-radius: 10px;
 }
 .content { 
     width: 65%; 
@@ -286,7 +269,7 @@ body {
     font-weight: 700;
     transition: color 0.3s;
     text-decoration: none;
-    /* text-align: left; */
+    margin-left: 0px;
 }
 .menu-item a:hover,
 .menu-item .act:hover {
@@ -327,21 +310,14 @@ body {
     font-weight: 800;
     line-height: 1.0;
     letter-spacing: -3px;
-    max-width: 900px;
+    max-width: 500px;
 }
 .orange-text { 
     color: #f78028; 
 }
-.hero .subtitle, .subtitle {
-    font-size: 18px;
-    color: #4a4a4a;
-    margin-top: 24px;
-    max-width: 560px;
-    line-height: 1.7;
-}
 
 /*  CONTENT SECTION 
-   Two-column layout at section level:*/
+Two-column layout at section level:*/
 .content-section { 
     padding: 0 0 80px; 
 }
@@ -358,11 +334,22 @@ body {
     padding-left: 0; 
     padding-right: 0;
 }
+.empowering-section{
+    margin-left: 100px;
+}
+.hero .subtitle, .subtitle {
+    font-size: 18px;
+    color: #4a4a4a;
+    margin-top: 24px;
+    max-width: 800px;
+    line-height: 1.7;
+    
+}
 .button-group {
     display: flex;
     gap: 16px;
     margin: 40px 0; 
-    max-width: 560px; 
+    max-width: 800px; 
     align-items: center;
     padding-left: 0;
     justify-content: flex-start;
@@ -461,12 +448,12 @@ body {
     border-radius: 6px;
 }
 .text-content {
-    padding: 28px 32px;
+    padding: 28px 60px 28px 0;
     flex: 0 0 auto;
     background: #fff;
 }
 .text-content p {
-    font-size: 15px;
+    font-size: 18px;
     color: #333;
     line-height: 1.85;
 }
@@ -739,7 +726,7 @@ i:hover {
     margin: auto;
 }
 .cont h1{
-    max-width: 791px;
+    max-width: 650px;
     text-align: center;
     margin: 0 auto;
     color: #fff;
@@ -751,11 +738,11 @@ i:hover {
 }
 .cont .individual{
     color: #f1a5c2;
-    text-align: center;
 }
 .cont .offer{
     color: #fff;
     max-width: 700px;
+    text-align: center;
     margin: 0 auto;
     padding-top: 30px;
     font-size: 20px;
@@ -765,7 +752,7 @@ i:hover {
     margin-top: 50px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    width: 100%;
+    width: 90%;
     margin: 0 auto;
     padding-inline: 100px;
 }
@@ -1397,7 +1384,7 @@ i:hover {
     object-fit: contain;  
 }
 .safety{
-    margin-left: 80px;
+    /* margin-left: 120px; */
     margin-top: 100px;
 }
 .safety h1{
@@ -1407,6 +1394,7 @@ i:hover {
     line-height: 1.0;
     letter-spacing: -3px;
     max-width: 900px;
+    margin-left: 45px;
 }
 .safety p{
    font-size: 18px;
@@ -1414,13 +1402,14 @@ i:hover {
     margin-top: 24px;
     line-height: 1.7;
     max-width: 850px;
+    margin-left: 45px;
 }
 .safety-flex{
     display: flex;
     gap: 250px;
-     max-width: 1100px;
-     margin: 0 auto;
-     margin-top: 50px;
+    max-width: 1100px;
+    margin: 0 auto;
+    margin-top: 50px;
 }
 .certification-flex h4{
     font-size: 18px;
@@ -1792,11 +1781,10 @@ ul {
     left: 20px;
     top: 50px;
     width: 2px;
-    height: calc(100% - 10px);
-    background: #ddd;
+    height: 90%;
+    border: 1px dotted #757474;
   }
   .step-number {
-    flex-shrink: 0;
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -1809,21 +1797,35 @@ ul {
     font-size: 16px;
     z-index: 1;
   }
+  .step-content{
+    width: 300px;
+  }
   .step-content h3 {
     font-size: 22px;
     margin-bottom: 10px;
     font-weight: 700;
   }
   .step-content p {
-    color: #5a5a6e;
-    line-height: 1.6;
-    font-size: 15px;
+    color: #000;
+    line-height: 1.6 !important;
+    font-size: 18px !important;
   }
-
+  .btn-started1{
+    padding: 16px 28px;
+     background-color: #0A0E27;
+     border-radius: 8px;
+     text-decoration: none;
+     font-weight: 600;
+     font-size: 15px;
+     font-family: 'Montserrat', sans-serif;transition: all 0.3s ease;
+     display: inline-block;
+     color: #fff;
+     margin-top: 260px;
+  }
   .right img{
     transform: scale(1.05);
     box-shadow: 0 10px 40px rgba(0,0,0,0.05);
-    margin-left: 280px;
+    margin-left: 50px;
   }
   .freelancer{
     max-width: 1200px;
@@ -1886,19 +1888,18 @@ ul {
   .nav-links a    { margin: 0 10px; font-size: 14px; }
   .btn-signin     { padding: 12px 24px; }
 
-  /* Shift mega-menus that would overflow right */
   .dropdown-wrapper:hover .mega-menu1,
   .dropdown-wrapper:focus-within .mega-menu1 { margin-left: -160px; }
 
-  /* ── HERO ── */
+  /* HERO */
   .hero h1        { font-size: 72px; letter-spacing: -2px; }
   .hero-main h1   { font-size: 66px; letter-spacing: -2px; }
 
-  /* ── CONTENT SECTION ── */
+  /* CONTENT SECTION */
   .section-inner  { gap: 40px; }
   .image-left     { height: 400px; }
 
-  /* ── ENDLESS PAYMENT ── */
+  /* ENDLESS PAYMENT */
   .endless-payment h1 { font-size: 48px; letter-spacing: -1.5px; }
   .feature-grid   {
     grid-template-columns: 1fr;
@@ -1909,11 +1910,11 @@ ul {
   .center-img img { margin: 0 auto; }
   .link-orange    { justify-content: center; }
 
-  /* ── PAYMENT SECTION (SME) ── */
+  /* PAYMENT SECTION (SME) */
   .features-grid  { grid-template-columns: 1fr; gap: 30px; }
   .strech-text    { font-size: 56px; line-height: 76px; }
 
-  /* ── INDIVIDUAL ── */
+  /* INDIVIDUAL */
   .cont h1        { font-size: 60px; line-height: 66px; }
   .cont-cards     {
     grid-template-columns: 1fr;
@@ -1922,30 +1923,30 @@ ul {
   }
   .cont-card      { width: 100%; margin-left: 0 !important; }
 
-  /* ── API SECTION ── */
+  /* API SECTION */
   .cont-api h1    { font-size: 52px; line-height: 60px; margin-left: 20px; }
   .cont-api p     { margin-left: 20px; font-size: 18px; }
   .features-list-container { margin: 30px 40px; }
   .api-btn        { margin-left: 20px; }
 
-  /* ── PAYMENT PAGE ── */
+  /* PAYMENT PAGE */
   .payment-cont   { flex-direction: column; }
   .payment-text h1 { font-size: 64px; line-height: 72px; }
   .payment-image img { height: auto; width: 100%; }
 
-  /* ── COLLECT SECTION ── */
+  /* COLLECT SECTION */
   .collect-section p { font-size: 44px; line-height: 64px; }
   .right img      { margin-left: 0; width: 100%; }
 
-  /* ── FREELANCER ── */
+  /* FREELANCER */
   .freelancer p   { font-size: 52px; line-height: 68px; }
 
-  /* ── SAFETY ── */
+  /* SAFETY */
   .safety         { margin-left: 20px; margin-top: 60px; }
   .safety h1      { font-size: 54px; }
   .safety-flex    { flex-direction: column; gap: 40px; margin-top: 30px; }
 
-  /* ── SWAP PAGE ── */
+  /* SWAP PAGE */
   .swap-cont      { flex-direction: column; padding: 40px 20px; }
   .visual-content img { max-width: 100%; margin-bottom: 0; }
   .swap1 h1       { font-size: 52px; }
@@ -1959,39 +1960,37 @@ ul {
   .numbers        { width: 100%; }
   .lines          { display: none; }
 
-  /* ── FAQ ── */
+  /* FAQ */
   .faq            { padding: 80px 60px; }
   .faq h1         { font-size: 52px; }
 
-  /* ── CTA ── */
+  /* CTA */
   .cta-container  { padding: 80px 60px; }
   .content-wrapper h2 { font-size: 38px; }
 
-  /* ── PAYOUT ── */
+  /* PAYOUT */
   .button-flex    { flex-direction: column; gap: 40px; }
   .button-group1  { margin-left: 40px; }
   .business-list1 { margin: 60px 0 60px 40px; flex-wrap: wrap; }
 
-  /* ── CHECKOUT ── */
+  /* CHECKOUT*/
   .checkout-hero h1 { font-size: 54px; }
   .shops          { flex-wrap: wrap; justify-content: center; }
 }
 
-
-/* ── MD: 768px ──────────────────────────────────────────── */
 @media (max-width: 768px) {
 
-  /* ── HEADER ── */
-  .nav-links      { display: none; }   /* hide desktop nav */
+  /* HEADER */
+  .nav-links      { display: none; }   
   .btn-signin     { padding: 10px 20px; font-size: 13px; }
 
-  /* ── HERO ── */
+  /* HERO */
   .hero           { margin-top: 24px; margin-bottom: 40px; }
   .hero h1        { font-size: 48px; letter-spacing: -1.5px; }
   .hero-main h1   { font-size: 44px; letter-spacing: -1.5px; }
   .hero-main p    { max-width: 100%; }
 
-  /* ── CONTENT SECTION ── */
+  /* CONTENT SECTION  */
   .section-inner  { grid-template-columns: 1fr; }
   .section-left   { padding: 0 20px; }
   .image-left     { height: 280px; }
@@ -2000,25 +1999,25 @@ ul {
   .button-group   { flex-direction: column; gap: 12px; max-width: 100%; }
   .button-group a { display: block; text-align: center; }
 
-  /* ── BUSINESS LOGOS ── */
+  /* BUSINESS LOGOS */
   .business-list  { flex-wrap: wrap; gap: 24px; justify-content: center; }
   .business-list1 { flex-wrap: wrap; gap: 24px; margin: 40px 20px; justify-content: center; }
 
-  /* ── ENDLESS PAYMENT ── */
+  /* ENDLESS PAYMENT */
   .endless-payment h1 { font-size: 36px; letter-spacing: -1px; }
 
-  /* ── SME PAYMENT SECTION ── */
+  /* SME PAYMENT SECTION */
   .strech-text    { font-size: 40px; line-height: 56px; }
   .section-header h2 { font-size: 2rem; }
   .text-card h3   { font-size: 1.5rem; }
 
-  /* ── INDIVIDUAL ── */
+  /* INDIVIDUAL */
   .cont           { width: 95%; }
   .cont h1        { font-size: 44px; line-height: 52px; }
   .cont .offer    { font-size: 16px; }
   .individual-section { padding-block: 80px; }
 
-  /* ── API SECTION ── */
+  /* API SECTION */
   .api-section    { padding: 40px 20px; }
   .cont-api h1    { font-size: 40px; line-height: 48px; margin-left: 0; }
   .cont-api p     { margin-left: 0; font-size: 16px; line-height: 26px; }
@@ -2026,7 +2025,7 @@ ul {
   .features-list li { font-size: 1rem; }
   .api-btn        { margin-left: 0; }
 
-  /* ── CTA CONTAINER ── */
+  /* CTA CONTAINER */
   .cta-container  { padding: 60px 30px; margin: 30px auto; border-radius: 10px; }
   .content-wrapper h2 { font-size: 30px; }
   .content-wrapper p  { font-size: 16px; }
@@ -2034,13 +2033,13 @@ ul {
   .cta-btn1,
   .cta-btn2       { text-align: center; justify-content: center; }
 
-  /* ── FOOTER ── */
+  /* FOOTER */
   .footer         { padding: 60px 24px 24px; }
   .footer-container { grid-template-columns: repeat(2, 1fr); gap: 30px; }
   .footer-middle  { flex-direction: column; gap: 16px; }
   .footer-bottom  { flex-direction: column; gap: 10px; }
 
-  /* ── PAYMENT PAGE ── */
+  /* PAYMENT PAGE */
   .payment-text h1 { font-size: 52px; line-height: 60px; letter-spacing: -2px; }
   .collect-section { padding: 60px 0; }
   .collect-section p { font-size: 34px; line-height: 52px; padding: 0 20px; }
@@ -2051,7 +2050,7 @@ ul {
   .safety p       { font-size: 16px; }
   .safety-flex    { max-width: 100%; padding: 0 20px; }
 
-  /* ── SWAP PAGE ── */
+  /* SWAP PAGE */
   .swap1 h1       { font-size: 40px; }
   .swap1 p,
   .exchange-list  { max-width: 100%; }
@@ -2062,66 +2061,64 @@ ul {
   .swap-grid,
   .number         { grid-template-columns: 1fr; gap: 32px; }
 
-  /* ── FAQ ── */
+  /* FAQ */
   .faq            { padding: 60px 24px; }
   .faq h1         { font-size: 38px; margin-bottom: 40px; }
   .faq-question   { font-size: 1.05rem; }
 
-  /* ── CHECKOUT ── */
+  /* CHECKOUT */
   .checkout-hero  { padding: 60px 24px; }
   .checkout-hero h1 { font-size: 40px; letter-spacing: -1px; }
   .shops          { flex-direction: column; align-items: center; padding: 0 20px; }
   .shop           { width: 100%; max-width: 400px; }
 
-  /* ── PAYOUT ── */
+  /* PAYOUT */
   .button-group1  { margin-left: 20px; flex-direction: column; }
   .btn-primary1,
   .btn-secondary1 { text-align: center; }
 }
 
-
-/* ── SM: 480px ──────────────────────────────────────────── */
 @media (max-width: 480px) {
 
-  /* ── CONTAINER ── */
+  /* CONTAINER */
   .container      { padding: 0 16px; }
 
-  /* ── HEADER ── */
+  /* HEADER */
   .logo img       { height: 32px; }
 
-  /* ── HERO ── */
+  /* HERO */
   .hero h1        { font-size: 36px; letter-spacing: -1px; }
   .hero-main h1   { font-size: 34px; }
   .hero .subtitle { font-size: 15px; }
 
-  /* ── ENDLESS PAYMENT ── */
+  /* ENDLESS PAYMENT */
   .endless-payment h1 { font-size: 28px; }
   .btn-dark       { padding: 14px 20px; font-size: 14px; }
 
-  /* ── SME SECTION ── */
+  /* SME SECTION */
   .strech-text    { font-size: 30px; line-height: 44px; margin-top: 24px; }
   .btn-strech     { padding: 18px 20px; font-size: 14px; }
   .section-header h2 { font-size: 1.7rem; letter-spacing: -1px; }
   .text-card h3   { font-size: 1.3rem; }
   .text-card p    { font-size: 0.95rem; }
 
-  /* ── INDIVIDUAL ── */
+  /* INDIVIDUAL */
   .cont h1        { font-size: 36px; line-height: 44px; }
   .cont .offer    { font-size: 15px; padding-top: 20px; }
   .cont-cards     { padding-inline: 12px; }
 
-  /* ── API SECTION ── */
+  /* API SECTION */
   .cont-api h1    { font-size: 32px; line-height: 40px; }
   .cont-api p     { font-size: 15px; }
 
-  /* ── CTA ── */
+  /* CTA */
   .cta-container  { padding: 40px 20px; }
   .content-wrapper h2 { font-size: 26px; }
 
-  /* ── FOOTER ── */
+  /* FOOTER */
   .footer-container { grid-template-columns: 1fr; }
 
-  /* ── PAYMENT PAGE ── */
+  /* PAYMENT PAGE */
   .payment-text h1 { font-size: 40px; line-height: 48px; }
   .payment-text p  { font-size: 15px; }
   .collect-section p { font-size: 26px; line-height: 40px; }
@@ -2131,7 +2128,7 @@ ul {
   .certification-flex h4 { font-size: 15px; }
   .certification-flex p  { font-size: 14px; }
 
-  /* ── SWAP PAGE ── */
+  /* SWAP PAGE */
   .swap-cont      { padding: 30px 16px; }
   .swap1 h1       { font-size: 32px; line-height: 1.2; }
   .swap1 p,
@@ -2145,62 +2142,59 @@ ul {
   .swap-grids h4,
   .numbers h6     { font-size: 15px; }
 
-  /* ── FAQ ── */
+  /* FAQ */
   .faq            { padding: 48px 16px; }
   .faq h1         { font-size: 30px; margin-bottom: 32px; }
   .faq-question   { font-size: 0.95rem; padding: 18px 0; }
 
-  /* ── CHECKOUT ── */
+  /* CHECKOUT */
   .checkout-hero  { padding: 48px 16px; }
   .checkout-hero h1 { font-size: 32px; }
   .checkout-hero p  { font-size: 15px; }
 
-  /* ── PAYOUT ── */
+  /* PAYOUT */
   .hero-main      { margin-top: 24px; margin-bottom: 40px; }
   .features-list-container { margin: 20px 0; }
   .features-list li { font-size: 0.95rem; }
   .button-group1  { margin-left: 0; }
   .business-list1 { margin: 40px 0; }
 }
-
-
-/* ── XS: 360px ──────────────────────────────────────────── */
 @media (max-width: 360px) {
 
-  /* ── HERO ── */
+  /*  HERO */
   .hero h1        { font-size: 30px; }
   .hero-main h1   { font-size: 28px; }
 
-  /* ── GENERAL TYPOGRAPHY ── */
+  /* GENERAL TYPOGRAPHY */
   .endless-payment h1 { font-size: 24px; }
   .strech-text    { font-size: 26px; line-height: 38px; }
   .section-header h2  { font-size: 1.5rem; }
   .cont h1        { font-size: 30px; line-height: 38px; }
   .cont-api h1    { font-size: 28px; line-height: 36px; }
 
-  /* ── BUTTONS ── */
+  /* BUTTONS */
   .btn-primary, .btn-secondary,
   .btn-primary1, .btn-secondary1,
   .btn-started, .btn-get,
   .cta-btn1, .cta-btn2 { padding: 12px 18px; font-size: 13px; }
 
-  /* ── PAYMENT ── */
+  /* PAYMENT */
   .payment-text h1 { font-size: 34px; line-height: 42px; }
   .collect-section p { font-size: 22px; line-height: 34px; }
   .freelancer p   { font-size: 24px; line-height: 36px; }
   .safety h1      { font-size: 26px; }
 
-  /* ── SWAP ── */
+  /* SWAP */
   .swap1 h1       { font-size: 28px; }
   .why-section h1,
   .process-section h1 { font-size: 26px; }
   .faq h1         { font-size: 26px; }
   .faq-question   { font-size: 0.9rem; }
 
-  /* ── CHECKOUT ── */
+  /* CHECKOUT */
   .checkout-hero h1 { font-size: 26px; }
 
-  /* ── FOOTER ── */
+  /* FOOTER */
   .footer         { padding: 48px 16px 20px; }
   .footer-bottom  { gap: 8px; }
 }
